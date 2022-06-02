@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "equipos",
+  "info": {
+    "singularName": "equipo",
+    "pluralName": "equipos",
+    "displayName": "Equipos",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 2
+    },
+    "Jugadores": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::jugador.jugador"
+    },
+    "Observaciones": {
+      "type": "richtext"
+    },
+    "Logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Activo": {
+      "type": "enumeration",
+      "enum": [
+        "Si",
+        "No"
+      ],
+      "default": "Si",
+      "required": true
+    }
+  }
+}

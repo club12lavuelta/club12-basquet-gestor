@@ -1,0 +1,105 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jugadores",
+  "info": {
+    "singularName": "jugador",
+    "pluralName": "jugadores",
+    "displayName": "Jugadores",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "required": true,
+      "minLength": 3,
+      "pluginOptions": {}
+    },
+    "Apellido": {
+      "type": "string",
+      "required": true,
+      "minLength": 3,
+      "pluginOptions": {}
+    },
+    "Email": {
+      "type": "email",
+      "required": true,
+      "minLength": 6,
+      "pluginOptions": {}
+    },
+    "Celular": {
+      "type": "biginteger",
+      "required": true,
+      "min": "1000000000",
+      "max": "9999999999",
+      "pluginOptions": {}
+    },
+    "Nacimiento": {
+      "type": "date",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "Faltas_Antideportivas": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "default": 0,
+      "pluginOptions": {}
+    },
+    "Faltas_Tecnincas": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "min": 0,
+      "pluginOptions": {}
+    },
+    "Fechas_Suspension": {
+      "type": "integer",
+      "default": 0,
+      "min": 0,
+      "required": true,
+      "pluginOptions": {}
+    },
+    "DNI": {
+      "type": "biginteger",
+      "required": true,
+      "max": "99999999",
+      "min": "1000000",
+      "pluginOptions": {}
+    },
+    "Foto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {}
+    },
+    "Observaciones": {
+      "type": "richtext",
+      "pluginOptions": {}
+    },
+    "Federado": {
+      "type": "enumeration",
+      "enum": [
+        "Si",
+        "No"
+      ],
+      "required": true,
+      "default": "No"
+    },
+    "Activo": {
+      "type": "enumeration",
+      "enum": [
+        "Si",
+        "No"
+      ],
+      "default": "Si",
+      "required": true
+    }
+  }
+}
